@@ -131,7 +131,8 @@ HTMLRedactor.prototype.setupEventListeners = function(){
       return;
     }
     var range = selection.getRangeAt(0);
-    range.surroundContents(span);
+    span.appendChild(range.extractContents());
+    range.insertNode(span);
 
     var width = $(span).width();
     var height = $(span).height();
