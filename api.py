@@ -12,7 +12,7 @@ api = restful.Api(app)
 class Convert(restful.Resource):
     def post(self):
         args = parser.parse_args()
-        return make_response(to_html(args['url'], 'html'))
+        return make_response(to_html(args['url'], 'pdf', "pdf2htmlEX"))
 
 api.add_resource(Convert, '/convert')
 
