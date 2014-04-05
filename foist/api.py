@@ -1,4 +1,4 @@
-from foist.conversion import to_html
+from foist.foist.conversion import to_html
 from flask import Flask, make_response
 from flask.ext import restful
 from flask.ext.restful import reqparse
