@@ -2,7 +2,7 @@ from flask import Flask, make_response
 from flask.ext import restful
 from flask.ext.restful import reqparse
 
-from .conversion import to_html
+from conversion import to_html
 
 parser = reqparse.RequestParser()
 parser.add_argument('url', type=str)
