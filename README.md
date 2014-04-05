@@ -27,9 +27,9 @@ work 90% of the time.
 1. Convert the PDF to HTML
   * We do this using [PDF2htmlEX](https://github.com/coolwanglu/pdf2htmlEX)
 2. Provide an Edit Window 
-    * Draw rectangles around the content you want to redact
-        * If it's text it gets replaced with exclamation marks
-        * If it's an image we draw a black box over it
+    * Clicking on any link converts it to plain text
+    * Highlighting any text replaces it with a black box
+    * Selecting any part of an image replaces that part with a black box
 3. Send the new 'clean' HTML back to the calling application
 4. The calling application can reconvert this HTML back to a PDF, if
 required. (Later versions of foist may offer this as an option.)
