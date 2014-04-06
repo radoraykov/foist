@@ -131,6 +131,11 @@ HTMLRedactor.prototype.setupEventListeners = function(){
       return;
     }
     var range = selection.getRangeAt(0);
+    var selectionClone = range.cloneContents()
+    if (selectionClone.children.length > 1) {
+      alert('We cannot do multiple lines yet. Please try line by line.')
+      return;
+    }
     span.appendChild(range.extractContents());
     range.insertNode(span);
 
